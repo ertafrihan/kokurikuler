@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" fill="none">
+  <defs>
+    <linearGradient id="art-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#311042"/>
+      <stop offset="50%" stop-color="#581c87"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="gold-mic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#art-bg)"/>
+
+  <!-- Music Notes Background -->
+  <g fill="#f5f3ff" fill-opacity="0.15">
+    <path d="M150 300 Q180 250 220 280 T260 250 L260 210 L180 220 Z"/>
+    <circle cx="180" cy="320" r="25"/>
+    <circle cx="260" cy="290" r="25"/>
+    
+    <path d="M850 600 Q880 550 920 580 T960 550 L960 510 L880 520 Z"/>
+    <circle cx="880" cy="620" r="25"/>
+    <circle cx="960" cy="590" r="25"/>
+  </g>
+
+  <!-- Glowing spotlight cones -->
+  <path d="M540 0 L100 1500 L980 1500 Z" fill="#ffffff" fill-opacity="0.05"/>
+  <path d="M200 0 L400 1500 L0 1500 Z" fill="#c084fc" fill-opacity="0.03"/>
+  <path d="M880 0 L1080 1500 L680 1500 Z" fill="#818cf8" fill-opacity="0.03"/>
+
+  <!-- Microphone Illustration centered -->
+  <g transform="translate(540, 850)">
+    <!-- Stand -->
+    <line x1="0" y1="200" x2="0" y2="600" stroke="#94a3b8" stroke-width="12" stroke-linecap="round"/>
+    <!-- Connector joint -->
+    <circle cx="0" cy="200" r="22" fill="#64748b"/>
+    <rect x="-10" y="120" width="20" height="80" fill="#64748b" rx="4"/>
+    
+    <!-- Handle -->
+    <path d="M-18 60 L18 60 L10 160 L-10 160 Z" fill="#1e293b" stroke="#475569" stroke-width="4"/>
+    <rect x="-24" y="45" width="48" height="15" rx="3" fill="#64748b"/>
+    
+    <!-- Head Capsule -->
+    <circle cx="0" cy="0" r="60" fill="url(#gold-mic)"/>
+    <!-- Grid overlay on mic head -->
+    <circle cx="0" cy="0" r="60" stroke="#1e293b" stroke-width="6"/>
+    <path d="M-60 0 L60 0 M0 -60 L0 60" stroke="#1e293b" stroke-width="4"/>
+    <path d="M-40 -40 L40 40 M-40 40 L40 -40" stroke="#1e293b" stroke-width="4"/>
+    <circle cx="0" cy="0" r="45" stroke="#1e293b" stroke-width="4" stroke-dasharray="6 6"/>
+  </g>
+
+  <!-- Musical Stave/Staff lines floating dynamically -->
+  <path d="M-50 1450 C200 1400, 400 1500, 540 1450 C680 1400, 900 1500, 1130 1450" stroke="#f1f5f9" stroke-width="4" stroke-opacity="0.3"/>
+  <path d="M-50 1475 C200 1425, 400 1525, 540 1475 C680 1425, 900 1525, 1130 1475" stroke="#f1f5f9" stroke-width="4" stroke-opacity="0.3"/>
+  <path d="M-50 1500 C200 1450, 400 1550, 540 1500 C680 1450, 900 1550, 1130 1500" stroke="#f1f5f9" stroke-width="4" stroke-opacity="0.3"/>
+
+  <!-- Sparkles -->
+  <path d="M220 800 L240 760 L260 800 L240 840 Z" fill="#fef08a" opacity="0.6"/>
+  <path d="M800 1000 L815 970 L830 1000 L815 1030 Z" fill="#fef08a" opacity="0.6"/>
+
+  <!-- Caption Area at the bottom -->
+  <rect x="0" y="1720" width="1080" height="200" fill="#000000" opacity="0.4"/>
+  <text x="540" y="1810" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="bold" text-anchor="middle">Ekstrakurikuler Paduan Suara</text>
+  <text x="540" y="1870" fill="#e2e8f0" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" text-anchor="middle">Harmoni Suara &amp; Eksplorasi Seni Musik</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" fill="none">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="50%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="tent-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1080" height="1920" fill="url(#bg-grad)"/>
+
+  <!-- Sun -->
+  <circle cx="900" cy="250" r="120" fill="#fef08a" opacity="0.8"/>
+  <circle cx="900" cy="250" r="90" fill="#fde047"/>
+
+  <!-- Mountains / Hills -->
+  <path d="M-100 1920 L-100 1300 Q150 1150 450 1350 T1180 1200 L1180 1920 Z" fill="#22c55e" opacity="0.7"/>
+  <path d="M-100 1920 L-100 1450 Q300 1300 700 1500 T1280 1380 L1280 1920 Z" fill="#16a34a"/>
+
+  <!-- Trees -->
+  <!-- Tree Left -->
+  <rect x="150" y="1000" width="40" height="500" fill="#78350f"/>
+  <ellipse cx="170" cy="950" rx="140" ry="180" fill="#14532d"/>
+  <ellipse cx="120" cy="900" rx="100" ry="120" fill="#166534"/>
+
+  <!-- Tree Right -->
+  <rect x="880" y="1100" width="30" height="400" fill="#78350f"/>
+  <ellipse cx="895" cy="1050" rx="110" ry="150" fill="#14532d"/>
+
+  <!-- Campfire -->
+  <path d="M490 1620 L590 1620 L570 1650 L510 1650 Z" fill="#451a03"/>
+  <path d="M510 1620 L570 1620 L550 1590 L530 1590 Z" fill="#78350f"/>
+  <path d="M540 1610 Q500 1550 540 1480 Q580 1550 540 1610 Z" fill="#ea580c" opacity="0.9"/>
+  <path d="M540 1610 Q520 1570 540 1520 Q560 1570 540 1610 Z" fill="#eab308"/>
+
+  <!-- Scout Tent (Pramuka) -->
+  <path d="M200 1700 L500 1350 L800 1700 Z" fill="url(#tent-grad)"/>
+  <path d="M500 1350 L800 1700 L730 1700 L500 1430 Z" fill="#14532d" opacity="0.3"/>
+  <!-- Tent Entrance -->
+  <path d="M400 1700 L500 1550 L600 1700 Z" fill="#164e63"/>
+  <!-- Tent Flaps -->
+  <path d="M400 1700 L500 1550 L450 1700 Z" fill="#155e75"/>
+  <path d="M600 1700 L500 1550 L550 1700 Z" fill="#155e75"/>
+
+  <!-- Scouts (Stylized Vector) -->
+  <!-- Scout Left -->
+  <circle cx="340" cy="1480" r="40" fill="#ffedd5"/>
+  <path d="M300 1530 C300 1530 280 1680 290 1700 L390 1700 C400 1680 380 1530 380 1530 Z" fill="#d97706"/>
+  <!-- Scout Scarf -->
+  <path d="M320 1525 L340 1550 L360 1525 Z" fill="#dc2626"/>
+  <path d="M340 1435 L280 1465 L340 1475 L400 1465 Z" fill="#b45309"/> <!-- Scout Hat -->
+
+  <!-- Scout Right -->
+  <circle cx="720" cy="1510" r="38" fill="#ffedd5"/>
+  <path d="M680 1560 C680 1560 665 1680 675 1700 L765 1700 C775 1680 760 1560 760 1560 Z" fill="#d97706"/>
+  <!-- Scout Scarf -->
+  <path d="M700 1555 L720 1580 L740 1555 Z" fill="#dc2626"/>
+  <path d="M720 1465 L660 1495 L720 1505 L780 1495 Z" fill="#b45309"/> <!-- Scout Hat -->
+
+  <!-- Clouds -->
+  <path d="M100 350 Q150 300 220 330 Q280 300 330 350 Q380 380 330 420 L100 420 Z" fill="#ffffff" opacity="0.9"/>
+  <path d="M650 450 Q700 400 770 430 Q830 400 880 450 Q930 480 880 520 L650 520 Z" fill="#ffffff" opacity="0.75"/>
+
+  <!-- Caption Area at the bottom (Instagram Story style) -->
+  <rect x="0" y="1720" width="1080" height="200" fill="#000000" opacity="0.4"/>
+  <text x="540" y="1810" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="bold" text-anchor="middle">Ekstrakurikuler Pramuka</text>
+  <text x="540" y="1870" fill="#e2e8f0" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" text-anchor="middle">Membentuk Karakter Mandiri &amp; Kepemimpinan</text>
+</svg>

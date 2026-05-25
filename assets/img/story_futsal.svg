@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" fill="none">
+  <defs>
+    <linearGradient id="pitch-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="50%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="neon-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#pitch-grad)"/>
+
+  <!-- Stadium Lights -->
+  <g opacity="0.15">
+    <circle cx="200" cy="150" r="300" fill="#93c5fd" filter="blur(80px)"/>
+    <circle cx="880" cy="150" r="300" fill="#93c5fd" filter="blur(80px)"/>
+  </g>
+
+  <!-- Futsal Court Markings -->
+  <ellipse cx="540" cy="1920" rx="450" ry="250" stroke="#ffffff" stroke-width="8" stroke-opacity="0.3" fill="none"/>
+  <line x1="0" y1="1400" x2="1080" y2="1400" stroke="#ffffff" stroke-width="10" stroke-opacity="0.3"/>
+  <circle cx="540" cy="1400" r="180" stroke="#ffffff" stroke-width="8" stroke-opacity="0.3" fill="none"/>
+  <circle cx="540" cy="1400" r="20" fill="#ffffff" fill-opacity="0.5"/>
+
+  <!-- Futsal Goalpost -->
+  <path d="M240 1400 L240 1050 L840 1050 L840 1400" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M240 1050 L140 1400 M840 1050 L940 1400" stroke="#ffffff" stroke-width="8" stroke-opacity="0.4" stroke-linecap="round"/>
+  
+  <!-- Net pattern (simple grid) -->
+  <g stroke="#ffffff" stroke-width="2" stroke-opacity="0.2">
+    <line x1="240" y1="1080" x2="840" y2="1080"/>
+    <line x1="240" y1="1120" x2="840" y2="1120"/>
+    <line x1="240" y1="1160" x2="840" y2="1160"/>
+    <line x1="240" y1="1200" x2="840" y2="1200"/>
+    <line x1="240" y1="1240" x2="840" y2="1240"/>
+    <line x1="240" y1="1280" x2="840" y2="1280"/>
+    <line x1="240" y1="1320" x2="840" y2="1320"/>
+    <line x1="240" y1="1360" x2="840" y2="1360"/>
+    
+    <line x1="300" y1="1050" x2="280" y2="1400"/>
+    <line x1="360" y1="1050" x2="340" y2="1400"/>
+    <line x1="420" y1="1050" x2="400" y2="1400"/>
+    <line x1="480" y1="1050" x2="460" y2="1400"/>
+    <line x1="540" y1="1050" x2="540" y2="1400"/>
+    <line x1="600" y1="1050" x2="620" y2="1400"/>
+    <line x1="660" y1="1050" x2="680" y2="1400"/>
+    <line x1="720" y1="1050" x2="740" y2="1400"/>
+    <line x1="780" y1="1050" x2="800" y2="1400"/>
+  </g>
+
+  <!-- Soccer Ball with motion blur -->
+  <g transform="translate(680, 1150)">
+    <circle cx="0" cy="0" r="45" fill="#ffffff"/>
+    <circle cx="0" cy="0" r="45" stroke="#1e293b" stroke-width="4"/>
+    <!-- Ball pentagons -->
+    <path d="M-15 -15 L15 -15 L25 15 L0 30 L-25 15 Z" fill="#1e293b"/>
+    <path d="M0 -45 L-10 -30 L10 -30 Z" fill="#1e293b"/>
+    <path d="M-45 -10 L-30 -15 L-30 10 Z" fill="#1e293b"/>
+    <path d="M45 -10 L30 -15 L30 10 Z" fill="#1e293b"/>
+    <!-- Motion lines -->
+    <path d="M-120 40 L-60 20 M-140 0 L-80 -10 M-110 -40 L-60 -20" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Player Silhouette (Action Pose) -->
+  <g transform="translate(420, 1120)">
+    <!-- Head -->
+    <circle cx="100" cy="0" r="35" fill="#fbcfe8"/>
+    <!-- Hair -->
+    <path d="M70 -15 Q100 -40 125 -15 Q125 10 110 5 Q90 5 70 -15 Z" fill="#1e293b"/>
+    <!-- Body / Jersey -->
+    <path d="M50 45 L150 45 L140 180 L60 180 Z" fill="url(#neon-glow)"/>
+    <!-- Arms -->
+    <path d="M50 45 L0 90 L-30 130" stroke="#fbcfe8" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M150 45 L200 90 L240 70" stroke="#fbcfe8" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Legs in kicking action -->
+    <path d="M70 180 L80 280 L160 300" stroke="#1e293b" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M130 180 L180 260 L260 230" stroke="#1e293b" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Socks / Shoes -->
+    <circle cx="160" cy="300" r="16" fill="#ef4444"/>
+    <circle cx="260" cy="230" r="16" fill="#ef4444"/>
+  </g>
+
+  <!-- Dynamic Sparkles / Energy lines -->
+  <path d="M800 950 L830 920 M850 990 L890 995" stroke="#fde047" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="150" cy="850" r="8" fill="#fde047"/>
+  <circle cx="920" cy="750" r="12" fill="#fde047"/>
+
+  <!-- Caption Area at the bottom -->
+  <rect x="0" y="1720" width="1080" height="200" fill="#000000" opacity="0.4"/>
+  <text x="540" y="1810" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="bold" text-anchor="middle">Ekstrakurikuler Futsal</text>
+  <text x="540" y="1870" fill="#e2e8f0" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" text-anchor="middle">Mengukir Prestasi, Menjunjung Sportivitas</text>
+</svg>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" fill="none">
+  <defs>
+    <linearGradient id="tech-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="circuit-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#tech-bg)"/>
+
+  <!-- Circuit board lines background pattern -->
+  <g stroke="#38bdf8" stroke-width="3" stroke-opacity="0.15" stroke-linecap="round">
+    <path d="M100 100 L300 100 L400 200 L400 500"/>
+    <circle cx="100" cy="100" r="8" fill="#38bdf8" fill-opacity="0.3"/>
+    <circle cx="400" cy="500" r="8" fill="#38bdf8" fill-opacity="0.3"/>
+    
+    <path d="M980 800 L800 800 L700 900 L700 1200 L600 1300"/>
+    <circle cx="980" cy="800" r="8" fill="#38bdf8" fill-opacity="0.3"/>
+    
+    <path d="M150 1500 L300 1500 L450 1350 L750 1350"/>
+    <circle cx="750" cy="1350" r="8" fill="#38bdf8" fill-opacity="0.3"/>
+  </g>
+
+  <!-- Large robot/arm central vector representation -->
+  <g transform="translate(540, 900)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Robotic Joint/Base -->
+    <rect x="-120" y="200" width="240" height="60" rx="10" fill="#334155" stroke="#475569" stroke-width="6"/>
+    <path d="M-60 200 L-40 100 L40 100 L60 200 Z" fill="#475569" stroke="#64748b" stroke-width="6"/>
+    
+    <!-- Lower Arm Segment -->
+    <line x1="0" y1="110" x2="-80" y2="-100" stroke="#64748b" stroke-width="40"/>
+    <circle cx="0" cy="110" r="25" fill="#38bdf8"/>
+    <circle cx="-80" cy="-100" r="25" fill="#38bdf8"/>
+    
+    <!-- Upper Arm Segment -->
+    <line x1="-80" y1="-100" x2="80" y2="-220" stroke="#94a3b8" stroke-width="30"/>
+    <circle cx="80" cy="-220" r="20" fill="#38bdf8"/>
+    
+    <!-- Gripper / Effectors -->
+    <path d="M80 -220 L130 -260 L120 -280" stroke="#38bdf8" stroke-width="12" fill="none"/>
+    <path d="M80 -220 L110 -180 L130 -190" stroke="#38bdf8" stroke-width="12" fill="none"/>
+    
+    <!-- Glowing Laser Sphere being processed -->
+    <circle cx="150" cy="-225" r="40" fill="#38bdf8" opacity="0.3"/>
+    <circle cx="150" cy="-225" r="25" fill="#e0f2fe"/>
+    <!-- Floating science nodes -->
+    <line x1="150" y1="-225" x2="250" y2="-280" stroke="#38bdf8" stroke-width="4" stroke-dasharray="8 8"/>
+    <circle cx="250" cy="-280" r="12" fill="#0ea5e9"/>
+    
+    <line x1="150" y1="-225" x2="230" y2="-150" stroke="#38bdf8" stroke-width="4" stroke-dasharray="8 8"/>
+    <circle cx="230" cy="-150" r="12" fill="#0ea5e9"/>
+  </g>
+
+  <!-- Code window mockup floating on top -->
+  <g transform="translate(140, 420)">
+    <rect width="800" height="350" rx="16" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="4"/>
+    <!-- Top bar -->
+    <circle cx="30" cy="25" r="8" fill="#ef4444"/>
+    <circle cx="55" cy="25" r="8" fill="#eab308"/>
+    <circle cx="80" cy="25" r="8" fill="#22c55e"/>
+    <text x="400" y="30" fill="#64748b" font-family="monospace" font-size="20" text-anchor="middle">robot_controller.py</text>
+    <line x1="0" y1="50" x2="800" y2="50" stroke="#334155" stroke-width="2"/>
+    
+    <!-- Lines of code -->
+    <text x="30" y="95" fill="#f43f5e" font-family="monospace" font-size="26">import</text>
+    <text x="140" y="95" fill="#e2e8f0" font-family="monospace" font-size="26">robotics_api as api</text>
+    
+    <text x="30" y="145" fill="#a855f7" font-family="monospace" font-size="26">def</text>
+    <text x="90" y="145" fill="#38bdf8" font-family="monospace" font-size="26">initialize_arm</text>
+    <text x="300" y="145" fill="#e2e8f0" font-family="monospace" font-size="26">():</text>
+    
+    <text x="80" y="195" fill="#e2e8f0" font-family="monospace" font-size="26">arm = api.RobotArm(port=</text>
+    <text x="440" y="195" fill="#eab308" font-family="monospace" font-size="26">"/dev/ttyUSB0"</text>
+    <text x="645" y="195" fill="#e2e8f0" font-family="monospace" font-size="26">)</text>
+    
+    <text x="80" y="245" fill="#e2e8f0" font-family="monospace" font-size="26">arm.calibrate_joints()</text>
+    
+    <text x="80" y="295" fill="#22c55e" font-family="monospace" font-size="26"># Start target processing</text>
+  </g>
+
+  <!-- Glowing binary decorations -->
+  <text x="100" y="1450" fill="#38bdf8" font-family="monospace" font-size="36" font-weight="bold" opacity="0.3">01101001</text>
+  <text x="850" y="1550" fill="#38bdf8" font-family="monospace" font-size="36" font-weight="bold" opacity="0.3">10011100</text>
+  <text x="880" y="350" fill="#38bdf8" font-family="monospace" font-size="36" font-weight="bold" opacity="0.3">{ JSON }</text>
+
+  <!-- Caption Area at the bottom -->
+  <rect x="0" y="1720" width="1080" height="200" fill="#000000" opacity="0.4"/>
+  <text x="540" y="1810" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="bold" text-anchor="middle">Ekstrakurikuler IT Club</text>
+  <text x="540" y="1870" fill="#e2e8f0" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" text-anchor="middle">Inovasi Robotika &amp; Rekayasa Perangkat Lunak</text>
+</svg>
