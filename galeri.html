@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galeri Ekstrakurikuler — SMK Budi Bakti Ciwidey</title>
-  <meta name="description" content="Jelajahi berbagai kegiatan ekstrakurikuler menarik di SMK Budi Bakti Ciwidey melalui format cerita interaktif (Stories)." />
+  <meta name="description"
+    content="Jelajahi berbagai kegiatan ekstrakurikuler menarik di SMK Budi Bakti Ciwidey melalui format cerita interaktif (Stories)." />
+  <link rel="icon" href="assets/img/favicon.png" />
 
   <!-- Tailwind CSS Play CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,21 +26,44 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
   <style>
     /* Page loading fade-in */
-    body { opacity: 0; animation: fadeIn 0.4s ease-out forwards; }
-    @keyframes fadeIn { to { opacity: 1; } }
+    body {
+      opacity: 0;
+      animation: fadeIn 0.4s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
 
     /* Instagram stories gradient border */
     .story-ring {
       background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
       padding: 3px;
     }
+
     .story-ring-viewed {
       background: #cbd5e1;
       padding: 3px;
+    }
+
+    /* Sembunyikan scrollbar untuk Chrome, Safari, dan Opera */
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Sembunyikan scrollbar untuk IE, Edge, dan Firefox */
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      /* IE dan Edge */
+      scrollbar-width: none;
+      /* Firefox */
     }
   </style>
 </head>
@@ -49,23 +75,28 @@
   ════════════════════════════════════════════════════════ -->
   <header class="sticky top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-      
+
       <!-- Back Button & Logo -->
       <div class="flex items-center gap-4">
-        <a href="index.html" class="inline-flex items-center justify-center w-8 h-8 rounded-lg hover:bg-slate-100 text-slate-600 transition" aria-label="Kembali ke Beranda">
+        <a href="index.html"
+          class="inline-flex items-center justify-center w-8 h-8 rounded-lg hover:bg-slate-100 text-slate-600 transition"
+          aria-label="Kembali ke Beranda">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
           </svg>
         </a>
-        <a href="index.html" class="text-slate-900 font-bold tracking-wider text-sm md:text-base">
-          SMK BUDI BAKTI CIWIDEY
+        <a href="index.html"
+          class="flex items-center gap-2.5 text-slate-900 font-bold tracking-wider text-sm md:text-base group">
+          <img src="assets/img/favicon.png" alt="Logo SMK Budi Bakti"
+            class="w-8 h-8 rounded-lg object-contain transition-transform group-hover:scale-105" />
+          <span>SMK BUDI BAKTI CIWIDEY</span>
         </a>
       </div>
 
       <!-- Navigation -->
-      <a href="index.html#daftar" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition shadow-sm text-sm font-semibold">
+      <!-- <a href="index.html#daftar" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition shadow-sm text-sm font-semibold">
         Daftar Sekarang
-      </a>
+      </a> -->
     </div>
   </header>
 
@@ -80,22 +111,29 @@
       <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 mb-4">Ekstrakurikuler</h1>
       <div class="mx-auto w-12 h-1 rounded-full bg-blue-600 mb-4"></div>
       <p class="text-slate-500 max-w-xl mx-auto text-sm md:text-base">
-        Lihat keseruan aktivitas siswa-siswi kami melalui cerita interaktif di bawah ini. Klik salah satu lingkaran untuk membuka cerita!
+        Lihat keseruan aktivitas siswa-siswi kami melalui cerita interaktif di bawah ini. Klik salah satu lingkaran
+        untuk membuka cerita!
       </p>
     </div>
 
     <!-- ════════════════════════════════════════════════════════
          STORIES TRAY (CIRCLE SLIDERS LIKE INSTAGRAM)
     ════════════════════════════════════════════════════════ -->
-    <div class="flex items-center justify-center gap-6 md:gap-10 overflow-x-auto py-6 mb-16 px-4 scrollbar-none select-none">
-      
+    <div
+      class="flex items-center justify-start md:justify-center gap-6 md:gap-10 overflow-x-auto py-6 mb-16 px-4 scrollbar-none select-none"
+      style="justify-content: safe center;">
+
       <!-- Story 1: Pramuka -->
       <button onclick="openStory(0)" class="flex flex-col items-center gap-2.5 focus:outline-none group">
-        <div id="ring-0" class="story-ring w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center transition transform group-hover:scale-105 duration-300">
-          <div class="w-full h-full rounded-full border-2 border-white bg-slate-100 overflow-hidden flex items-center justify-center">
+        <div id="ring-0"
+          class="story-ring w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center transition transform group-hover:scale-105 duration-300">
+          <div
+            class="w-full h-full rounded-full border-2 border-white bg-slate-100 overflow-hidden flex items-center justify-center">
             <!-- Scout Icon/Miniature SVG -->
-            <svg class="w-10 h-10 text-slate-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            <svg class="w-10 h-10 text-slate-600" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
             </svg>
           </div>
         </div>
@@ -104,11 +142,15 @@
 
       <!-- Story 2: Futsal -->
       <button onclick="openStory(1)" class="flex flex-col items-center gap-2.5 focus:outline-none group">
-        <div id="ring-1" class="story-ring w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center transition transform group-hover:scale-105 duration-300">
-          <div class="w-full h-full rounded-full border-2 border-white bg-slate-100 overflow-hidden flex items-center justify-center">
+        <div id="ring-1"
+          class="story-ring w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center transition transform group-hover:scale-105 duration-300">
+          <div
+            class="w-full h-full rounded-full border-2 border-white bg-slate-100 overflow-hidden flex items-center justify-center">
             <!-- Futsal Icon -->
-            <svg class="w-10 h-10 text-slate-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
+            <svg class="w-10 h-10 text-slate-600" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
             </svg>
           </div>
         </div>
@@ -117,11 +159,15 @@
 
       <!-- Story 3: IT Club -->
       <button onclick="openStory(2)" class="flex flex-col items-center gap-2.5 focus:outline-none group">
-        <div id="ring-2" class="story-ring w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center transition transform group-hover:scale-105 duration-300">
-          <div class="w-full h-full rounded-full border-2 border-white bg-slate-100 overflow-hidden flex items-center justify-center">
+        <div id="ring-2"
+          class="story-ring w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center transition transform group-hover:scale-105 duration-300">
+          <div
+            class="w-full h-full rounded-full border-2 border-white bg-slate-100 overflow-hidden flex items-center justify-center">
             <!-- IT Icon -->
-            <svg class="w-10 h-10 text-slate-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+            <svg class="w-10 h-10 text-slate-600" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
             </svg>
           </div>
         </div>
@@ -130,64 +176,174 @@
 
       <!-- Story 4: Choir -->
       <button onclick="openStory(3)" class="flex flex-col items-center gap-2.5 focus:outline-none group">
-        <div id="ring-3" class="story-ring w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center transition transform group-hover:scale-105 duration-300">
-          <div class="w-full h-full rounded-full border-2 border-white bg-slate-100 overflow-hidden flex items-center justify-center">
+        <div id="ring-3"
+          class="story-ring w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center transition transform group-hover:scale-105 duration-300">
+          <div
+            class="w-full h-full rounded-full border-2 border-white bg-slate-100 overflow-hidden flex items-center justify-center">
             <!-- Music Icon -->
-            <svg class="w-10 h-10 text-slate-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 0v11.25m0-11.25L9 9.75M9 9.75v11.25m0-11.25L19.5 7.5M9 21a3 3 0 11-6 0 3 3 0 016 0zm10.5-3.75a3 3 0 11-6 0 3 3 0 016 0z" />
+            <svg class="w-10 h-10 text-slate-600" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 9l10.5-3m0 0v11.25m0-11.25L9 9.75M9 9.75v11.25m0-11.25L19.5 7.5M9 21a3 3 0 11-6 0 3 3 0 016 0zm10.5-3.75a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
         </div>
         <span class="text-xs md:text-sm font-semibold text-slate-800 tracking-wide">Paduan Suara</span>
       </button>
 
+      <!-- Story 5: Paskibra -->
+      <button onclick="openStory(4)" class="flex flex-col items-center gap-2.5 focus:outline-none group">
+        <div id="ring-4"
+          class="story-ring w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center transition transform group-hover:scale-105 duration-300">
+          <div
+            class="w-full h-full rounded-full border-2 border-white bg-slate-100 overflow-hidden flex items-center justify-center">
+            <!-- Paskibra Icon: Flag -->
+            <svg class="w-10 h-10 text-slate-600" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+            </svg>
+          </div>
+        </div>
+        <span class="text-xs md:text-sm font-semibold text-slate-800 tracking-wide">Paskibra</span>
+      </button>
+
+      <!-- Story 6: Instagram Direct Link -->
+      <a href="https://www.instagram.com/info.smkbudibakticiwidey" target="_blank" rel="noopener noreferrer"
+        class="flex flex-col items-center gap-2.5 focus:outline-none group">
+        <div
+          class="story-ring w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center transition transform group-hover:scale-105 duration-300">
+          <div
+            class="w-full h-full rounded-full border-2 border-white bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] overflow-hidden flex items-center justify-center text-white">
+            <!-- Instagram Icon -->
+            <svg class="w-9 h-9 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+          </div>
+        </div>
+        <span class="text-xs md:text-sm font-semibold text-slate-800 tracking-wide">Instagram</span>
+      </a>
+
     </div>
 
     <!-- ════════════════════════════════════════════════════════
          GRID GALLERY PREVIEW (STATIC ALTERNATIVE)
     ════════════════════════════════════════════════════════ -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+
       <!-- Card 1 -->
-      <div onclick="openStory(0)" class="border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer transition group">
+      <div onclick="openStory(0)"
+        class="border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer transition group">
         <div class="aspect-[3/4] bg-slate-100 overflow-hidden relative">
-          <img src="assets/img/story_pramuka.svg" alt="Pramuka Cover" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-end p-6">
+          <img src="assets/img/story_pramuka.svg" alt="Pramuka Cover"
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-end p-6">
             <span class="text-white font-bold text-lg">Pramuka</span>
           </div>
         </div>
       </div>
 
       <!-- Card 2 -->
-      <div onclick="openStory(1)" class="border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer transition group">
+      <div onclick="openStory(1)"
+        class="border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer transition group">
         <div class="aspect-[3/4] bg-slate-100 overflow-hidden relative">
-          <img src="assets/img/story_futsal.svg" alt="Futsal Cover" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-end p-6">
+          <img src="assets/img/story_futsal.svg" alt="Futsal Cover"
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-end p-6">
             <span class="text-white font-bold text-lg">Futsal</span>
           </div>
         </div>
       </div>
 
       <!-- Card 3 -->
-      <div onclick="openStory(2)" class="border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer transition group">
+      <div onclick="openStory(2)"
+        class="border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer transition group">
         <div class="aspect-[3/4] bg-slate-100 overflow-hidden relative">
-          <img src="assets/img/story_tech_club.svg" alt="IT Club Cover" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-end p-6">
+          <img src="assets/img/story_tech_club.svg" alt="IT Club Cover"
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-end p-6">
             <span class="text-white font-bold text-lg">IT Club</span>
           </div>
         </div>
       </div>
 
       <!-- Card 4 -->
-      <div onclick="openStory(3)" class="border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer transition group">
+      <div onclick="openStory(3)"
+        class="border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer transition group">
         <div class="aspect-[3/4] bg-slate-100 overflow-hidden relative">
-          <img src="assets/img/story_art_club.svg" alt="Paduan Suara Cover" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-end p-6">
+          <img src="assets/img/story_art_club.svg" alt="Paduan Suara Cover"
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-end p-6">
             <span class="text-white font-bold text-lg">Paduan Suara</span>
           </div>
         </div>
       </div>
 
+      <!-- Card 5 -->
+      <div onclick="openStory(4)"
+        class="border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer transition group">
+        <div class="aspect-[3/4] bg-slate-100 overflow-hidden relative">
+          <img src="assets/img/story_paskibra.svg" alt="Paskibra Cover"
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-end p-6">
+            <span class="text-white font-bold text-lg">Paskibra</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════
+         INSTAGRAM CALL TO ACTION BANNER
+    ════════════════════════════════════════════════════════ -->
+    <div class="mt-20 max-w-3xl mx-auto">
+      <div
+        class="relative rounded-2xl border border-slate-100 bg-gradient-to-br from-slate-50 via-white to-slate-50 p-8 text-center shadow-sm overflow-hidden group">
+        <!-- Ambient floating background gradients -->
+        <div
+          class="absolute -top-12 -right-12 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl transition-all duration-700 group-hover:scale-125">
+        </div>
+        <div
+          class="absolute -bottom-12 -left-12 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl transition-all duration-700 group-hover:scale-125">
+        </div>
+
+        <div class="relative flex flex-col items-center gap-4">
+          <!-- Instagram Icon Container with Instagram Gradient -->
+          <div
+            class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] flex items-center justify-center text-white shadow-lg shadow-pink-500/20 transform transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
+            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+          </div>
+
+          <h2 class="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight mt-2">
+            Jelajahi Selengkapnya Keseruan Kami!
+          </h2>
+
+          <p class="text-sm text-slate-500 max-w-md leading-relaxed">
+            Dapatkan update harian kegiatan siswa, dokumentasi kegiatan ekstrakurikuler ter-up-to-date, dan momen
+            keseruan sekolah lainnya langsung di Instagram resmi kami.
+          </p>
+
+          <!-- Interactive Gradient CTA Button -->
+          <a href="https://www.instagram.com/info.smkbudibakticiwidey" target="_blank" rel="noopener noreferrer"
+            id="instagram-cta-link"
+            class="mt-2 inline-flex items-center gap-2.5 bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] hover:opacity-95 text-white font-semibold text-sm px-7 py-3.5 rounded-xl shadow-lg hover:shadow-pink-500/20 transform transition-all duration-300 hover:scale-105 active:scale-95 group/btn">
+            <span>Meluncur ke Instagram</span>
+            <svg class="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none"
+              stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
 
   </main>
@@ -195,23 +351,23 @@
   <!-- ════════════════════════════════════════════════════════
        INTERACTIVE STORY MODAL/OVERLAY (FULLSCREEN SPEC)
   ════════════════════════════════════════════════════════ -->
-  <div id="story-modal" class="fixed inset-0 z-50 bg-slate-950/98 backdrop-blur-md hidden items-center justify-center p-0 md:p-4 select-none">
-    
+  <div id="story-modal"
+    class="fixed inset-0 z-50 bg-slate-950/98 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center p-0 md:p-4 select-none">
+
     <!-- Modal Wrapper: Centered mobile container on desktop, fullscreen on mobile -->
-    <div class="relative w-full max-w-[430px] aspect-[9/16] bg-black md:rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-800">
-      
+    <div
+      class="relative w-full max-w-[430px] aspect-[9/16] bg-black md:rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between border border-slate-800">
+
       <!-- Progress Bar Area -->
-      <div class="absolute top-3 left-0 right-0 z-30 px-3 flex gap-1.5 h-1">
-        <!-- Progress bar segments inside JS -->
-        <div class="progress-bar flex-grow bg-white/30 h-full rounded-full overflow-hidden">
-          <div class="progress-fill bg-white h-full w-0 transition-all duration-75"></div>
-        </div>
+      <div id="progress-container" class="absolute top-3 left-0 right-0 z-30 px-3 flex gap-1.5 h-1">
+        <!-- Progress bar segments are dynamically injected here -->
       </div>
 
       <!-- Story Header -->
       <div class="absolute top-6 left-0 right-0 z-30 px-4 flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-blue-600 border border-white/50 overflow-hidden flex items-center justify-center text-white font-bold text-xs">
+          <div
+            class="w-9 h-9 rounded-full bg-blue-600 border border-white/50 overflow-hidden flex items-center justify-center text-white font-bold text-xs">
             SBB
           </div>
           <div>
@@ -220,7 +376,8 @@
           </div>
         </div>
         <!-- Close Button -->
-        <button onclick="closeStory()" class="w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center transition focus:outline-none">
+        <button onclick="closeStory()"
+          class="w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center transition focus:outline-none">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
@@ -238,20 +395,53 @@
         <img id="story-image" src="" alt="Story Image" class="w-full h-full object-cover z-10" />
       </div>
 
-      <!-- Story Footer / Interactive reply box -->
-      <div class="absolute bottom-4 inset-x-0 z-30 px-4 flex items-center gap-3">
-        <input 
-          id="reply-input" 
-          type="text" 
-          placeholder="Kirim tanggapan..." 
-          class="flex-grow bg-white/10 hover:bg-white/15 focus:bg-white/20 border border-white/20 rounded-full py-2.5 px-5 text-sm text-white placeholder-white/50 focus:outline-none transition" 
-          onkeydown="if(event.key === 'Enter') sendReply()"
-        />
-        <button onclick="sendReply()" class="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center transition shadow-sm">
-          <svg class="w-4 h-4 transform rotate-45 translate-x-px -translate-y-px" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-          </svg>
-        </button>
+      <!-- TikTok-style Action Sidebar (Right Side) -->
+      <div class="absolute right-4 bottom-28 z-30 flex flex-col items-center gap-5">
+        <!-- Love Button & Label -->
+        <div class="flex flex-col items-center gap-1">
+          <button id="story-love-btn" onclick="toggleLove()"
+            class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 border border-white/20 text-white flex items-center justify-center transition shadow-lg backdrop-blur-sm focus:outline-none group"
+            style="transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);" aria-label="Sukai Cerita">
+            <!-- Heart outline -->
+            <svg id="love-icon-outline" class="w-6 h-6 transition-transform duration-200 group-hover:scale-110"
+              fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+            </svg>
+            <!-- Heart filled (hidden by default) -->
+            <svg id="love-icon-filled" class="w-6 h-6 text-red-500 hidden transition-transform duration-200"
+              fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+            </svg>
+          </button>
+          <span class="text-[10px] text-white/95 font-bold tracking-wide select-none drop-shadow">Suka</span>
+        </div>
+
+        <!-- Share Button & Label -->
+        <div class="flex flex-col items-center gap-1">
+          <button onclick="shareStory()"
+            class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 border border-white/20 text-white flex items-center justify-center transition shadow-lg backdrop-blur-sm focus:outline-none group"
+            aria-label="Bagikan Cerita">
+            <!-- Paper Airplane / Share Icon -->
+            <svg
+              class="w-6 h-6 transition-transform duration-200 group-hover:scale-110 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+            </svg>
+          </button>
+          <span class="text-[10px] text-white/95 font-bold tracking-wide select-none drop-shadow">Bagikan</span>
+        </div>
+      </div>
+
+      <!-- Toast Notification for Share (hidden by default) -->
+      <div id="share-toast"
+        class="absolute bottom-20 left-1/2 -translate-x-1/2 bg-slate-900/90 border border-slate-700/50 backdrop-blur-sm text-white text-xs font-semibold px-4 py-2 rounded-full opacity-0 pointer-events-none transition-all duration-300 z-40 flex items-center gap-1.5 shadow-md w-max">
+        <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+        </svg>
+        Tautan cerita berhasil disalin!
       </div>
 
     </div>
@@ -292,6 +482,11 @@
         title: "Ekstrakurikuler Paduan Suara",
         image: "assets/img/story_art_club.svg",
         ringId: "ring-3"
+      },
+      {
+        title: "Ekstrakurikuler Paskibra",
+        image: "assets/img/story_paskibra.svg",
+        ringId: "ring-4"
       }
     ];
 
@@ -301,12 +496,33 @@
     let progressPercent = 0;
     const STORY_DURATION = 5000; // 5 seconds per story
 
+    // Likes state tracking
+    const likedStories = {};
+
+    // Initialize progress bars inside the container
+    function initProgressBars() {
+      const container = document.getElementById('progress-container');
+      if (!container) return;
+      container.innerHTML = '';
+      stories.forEach((_, idx) => {
+        const segment = document.createElement('div');
+        segment.className = 'progress-bar flex-grow bg-white/30 h-full rounded-full overflow-hidden';
+
+        const fill = document.createElement('div');
+        fill.id = `progress-fill-${idx}`;
+        fill.className = 'bg-white h-full w-0 transition-all duration-75';
+
+        segment.appendChild(fill);
+        container.appendChild(segment);
+      });
+    }
+
     function openStory(index) {
       currentStoryIdx = index;
       const modal = document.getElementById('story-modal');
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100');
+
       // Mark ring as viewed/gray
       const ring = document.getElementById(stories[index].ringId);
       if (ring) {
@@ -319,21 +535,45 @@
 
     function closeStory() {
       const modal = document.getElementById('story-modal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
+      modal.classList.remove('opacity-100');
+      modal.classList.add('opacity-0', 'pointer-events-none');
       clearTimers();
     }
 
     function loadStory(index) {
       clearTimers();
-      
+
       const story = stories[index];
       document.getElementById('story-title').innerText = story.title;
       document.getElementById('story-image').src = story.image;
-      
-      // Reset progress bar
+
+      // Sync Love icon state
+      const isLiked = !!likedStories[index];
+      const outline = document.getElementById('love-icon-outline');
+      const filled = document.getElementById('love-icon-filled');
+      if (isLiked) {
+        outline.classList.add('hidden');
+        filled.classList.remove('hidden');
+      } else {
+        outline.classList.remove('hidden');
+        filled.classList.add('hidden');
+      }
+
+      // Reset and rebuild progress bar segments
+      initProgressBars();
+
+      // Set previous segments as completely filled (100%)
+      for (let i = 0; i < index; i++) {
+        const fill = document.getElementById(`progress-fill-${i}`);
+        if (fill) {
+          fill.classList.remove('transition-all', 'duration-75'); // instant fill
+          fill.style.width = '100%';
+        }
+      }
+
+      // Reset current segment progress
       progressPercent = 0;
-      updateProgressBar(0);
+      updateProgressBar(index, 0);
 
       // Start timers
       const start = Date.now();
@@ -342,16 +582,16 @@
         progressPercent = (elapsed / STORY_DURATION) * 100;
         if (progressPercent >= 100) {
           progressPercent = 100;
-          updateProgressBar(100);
+          updateProgressBar(index, 100);
           nextSegment();
         } else {
-          updateProgressBar(progressPercent);
+          updateProgressBar(index, progressPercent);
         }
       }, 30);
     }
 
-    function updateProgressBar(percent) {
-      const bar = document.querySelector('.progress-fill');
+    function updateProgressBar(index, percent) {
+      const bar = document.getElementById(`progress-fill-${index}`);
       if (bar) {
         bar.style.width = `${percent}%`;
       }
@@ -378,25 +618,110 @@
       }
     }
 
-    function sendReply() {
-      const input = document.getElementById('reply-input');
-      const val = input.value.trim();
-      if (val) {
-        alert(`Tanggapan terkirim: "${val}"\nTerima kasih atas antusiasme Anda terhadap ekstrakurikuler kami!`);
-        input.value = '';
+    function toggleLove() {
+      const isLiked = !likedStories[currentStoryIdx];
+      likedStories[currentStoryIdx] = isLiked;
+
+      const outline = document.getElementById('love-icon-outline');
+      const filled = document.getElementById('love-icon-filled');
+      const btn = document.getElementById('story-love-btn');
+
+      // Bounce scale micro-animation
+      btn.style.transform = 'scale(0.85)';
+      setTimeout(() => {
+        btn.style.transform = 'scale(1.15)';
+        setTimeout(() => {
+          btn.style.transform = '';
+        }, 150);
+      }, 80);
+
+      if (isLiked) {
+        outline.classList.add('hidden');
+        filled.classList.remove('hidden');
+      } else {
+        outline.classList.remove('hidden');
+        filled.classList.add('hidden');
       }
     }
+
+    function shareStory() {
+      // Build story URL with query parameter for deep-linking
+      const storyUrl = `${window.location.origin}${window.location.pathname}?story=${currentStoryIdx}`;
+
+      navigator.clipboard.writeText(storyUrl).then(() => {
+        const toast = document.getElementById('share-toast');
+        if (toast) {
+          toast.classList.remove('opacity-0', 'pointer-events-none');
+          toast.classList.add('opacity-100');
+
+          setTimeout(() => {
+            toast.classList.remove('opacity-100');
+            toast.classList.add('opacity-0', 'pointer-events-none');
+          }, 2000);
+        }
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+    }
+
+    // Auto-open story if shared via deep-link query parameter (?story=X)
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const storyParam = params.get('story');
+      if (storyParam !== null) {
+        const storyIdx = parseInt(storyParam, 10);
+        if (storyIdx >= 0 && storyIdx < stories.length) {
+          setTimeout(() => openStory(storyIdx), 400);
+        }
+      }
+    });
 
     // Support keyboard navigation inside story view
     document.addEventListener('keydown', (e) => {
       const modal = document.getElementById('story-modal');
-      if (!modal.classList.contains('hidden')) {
+      if (modal && !modal.classList.contains('opacity-0')) {
         if (e.key === 'ArrowRight') nextSegment();
         if (e.key === 'ArrowLeft') prevSegment();
         if (e.key === 'Escape') closeStory();
       }
     });
+
+    // Smooth click-and-drag horizontal scroll behavior for Story Tray
+    const tray = document.querySelector('.scrollbar-none');
+    if (tray) {
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      tray.addEventListener('mousedown', (e) => {
+        isDown = true;
+        tray.classList.add('cursor-grabbing');
+        startX = e.pageX - tray.offsetLeft;
+        scrollLeft = tray.scrollLeft;
+        // Prevent default text selection during drag
+        e.preventDefault();
+      });
+
+      tray.addEventListener('mouseleave', () => {
+        isDown = false;
+        tray.classList.remove('cursor-grabbing');
+      });
+
+      tray.addEventListener('mouseup', () => {
+        isDown = false;
+        tray.classList.remove('cursor-grabbing');
+      });
+
+      tray.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - tray.offsetLeft;
+        const walk = (x - startX) * 1.5; // scroll speed multiplier
+        tray.scrollLeft = scrollLeft - walk;
+      });
+    }
   </script>
 
 </body>
+
 </html>

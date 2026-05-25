@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" fill="none">
+  <defs>
+    <linearGradient id="paskibra-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#991b1b"/>
+      <stop offset="50%" stop-color="#450a0a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+    <linearGradient id="flag-white" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#paskibra-bg)"/>
+
+  <!-- Glowing background sun rays -->
+  <path d="M540 900 L0 0 L1080 0 Z" fill="#ffffff" fill-opacity="0.03"/>
+  <path d="M540 900 L0 1920 L1080 1920 Z" fill="#ffffff" fill-opacity="0.03"/>
+
+  <!-- Big golden laurel leaves background (embossed circle) -->
+  <circle cx="540" cy="850" r="320" fill="#ffffff" fill-opacity="0.02" stroke="url(#gold-grad)" stroke-width="4" stroke-opacity="0.2"/>
+
+  <!-- Giant waving Indonesian Flag -->
+  <g transform="translate(540, 750)">
+    <!-- Flag Pole -->
+    <rect x="-180" y="-220" width="16" height="600" rx="8" fill="url(#gold-grad)"/>
+    <circle cx="-172" cy="-230" r="18" fill="url(#gold-grad)"/>
+
+    <!-- Flag Fabric Wavy Waves -->
+    <!-- Red part -->
+    <path d="M-164 -180 C-100 -220, -50 -140, 50 -180 C150 -220, 200 -140, 300 -180 L300 -40 C200 0, 150 -80, 50 -40 C-50 0, -100 -80, -164 -40 Z" fill="#dc2626"/>
+    <!-- White part -->
+    <path d="M-164 -40 C-100 -80, -50 0, 50 -40 C150 -80, 200 0, 300 -40 L300 100 C200 140, 150 60, 50 100 C-50 140, -100 60, -164 100 Z" fill="url(#flag-white)"/>
+    
+    <!-- Ropes and pulleys -->
+    <line x1="-172" y1="-210" x2="-150" y2="350" stroke="#f1f5f9" stroke-width="3" stroke-opacity="0.6"/>
+    <line x1="-166" y1="-210" x2="-166" y2="350" stroke="#f1f5f9" stroke-width="3" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- Laurel wreath emblem details at the bottom of flagpole -->
+  <path d="M380 1150 Q540 1250 700 1150" stroke="url(#gold-grad)" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M360 1120 Q540 1270 720 1120" stroke="url(#gold-grad)" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+  <!-- Golden Stars of Honor -->
+  <g fill="url(#gold-grad)">
+    <path d="M540 400 L555 435 L590 435 L560 455 L572 490 L540 470 L508 490 L520 455 L490 435 L525 435 Z"/>
+    <path d="M420 460 L430 485 L455 485 L435 500 L443 525 L420 510 L397 525 L405 500 L385 485 L410 485 Z" opacity="0.8"/>
+    <path d="M660 460 L670 485 L695 485 L675 500 L683 525 L660 510 L637 525 L645 500 L625 485 L650 485 Z" opacity="0.8"/>
+  </g>
+
+  <!-- Caption Area at the bottom -->
+  <rect x="0" y="1720" width="1080" height="200" fill="#000000" opacity="0.4"/>
+  <text x="540" y="1810" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="bold" text-anchor="middle">Ekstrakurikuler Paskibra</text>
+  <text x="540" y="1870" fill="#e2e8f0" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" text-anchor="middle">Disiplin Tinggi, Cinta Tanah Air &amp; Kepemimpinan</text>
+</svg>
